@@ -1,8 +1,40 @@
 angular.module('portalApp')
-.controller('eventlobbyCtrl', ['$scope', function ($scope) {
+angular.module('portalApp')
+
+.controller('eventlobbyCtrl', ['$scope', '$http', '$q', 'sampleSimpleListFactory', function ($scope, $http, $q, sampleSimpleListFactory) {
 	
+    $scope.item = {value:''};
+    
 	// mock data
-	$scope.items = [
+	
+    $scope.modelA = {value: [{
+        title: "item 1",
+        details: "item 1 details",
+        category: '1'
+    }, {
+        title: "item 2",
+        details: "item 2 details",
+        category: '2'
+    }, {
+        title: "item 3",
+        details: "item 3 details",
+        category: '1'
+    }, {
+        title: "item 4",
+        details: "item 4 details",
+        category: '2'
+    }, {
+        title: "item 5",
+        details: "item 5 details",
+        category: '1'
+    }, {
+        title: "item 6",
+        details: "item 6 details",
+        category: '2'
+    }]};
+    
+    
+    $scope.items = {value: [ 
 		{
 			title:'Math 135 Study Group',
 			tags: ['Study Group', 'Math 135', 'M3'],
@@ -48,8 +80,10 @@ angular.module('portalApp')
             capacity: 'Unlimited',
             addedby: 'mgoose'
 		}
-	];
-	
+	]};
+        
+    sampleSimpleListFactory.init($scope);
+    
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('eventlobbyMain.html', 1);
 	
@@ -64,4 +98,25 @@ angular.module('portalApp')
 		$scope.detailsItem = item;		
 		$scope.portalHelpers.showView('eventlobbyDetails.html', 2);
 	}
-}]);
+}])
+
+.factory('sampleSimpleListFactory', ['$http', '$rootScope', '$filter', '$q', function ($http, $rootScope, $filter, $q) {
+        var initialized = {
+            value: false
+        };
+
+
+        var sourcesLoaded = 0;
+
+        var init = function ($scope) {
+            if (initialized.value)
+                return;
+            initialized.value = true;
+        }
+
+
+        return {
+            init: init
+        };
+
+    }]);
