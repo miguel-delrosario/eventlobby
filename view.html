@@ -15,6 +15,9 @@
             <span class="itemName">{{item.title}}
             </span>
             <widget-row>
+                <div class="pDetails">{{item.time}}</div>
+            </widget-row>
+            <widget-row>
                 <span ng-repeat="tag in item.tags" class="label label-success">
                     {{tag}}
                 </span>
@@ -83,7 +86,7 @@
                             </span></wr>
     </widget-row>
     <widget-row>
-        <div class="pDetails">Enter the start and end time for the event:</div>
+        <div class="pDetails">Enter the date, start time, and end time for the event (e.g. January 1, 12pm-7pm):</div>
         <wr>
             <input type="text" class="form-control" ng-model="insertValue.time" placeholder="Time" />
             <span class="input-group-btn" style="overflow:hidden;">
