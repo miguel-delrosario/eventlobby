@@ -19,6 +19,14 @@ angular.module('portalApp')
             time: 'November 4, 11am - 7pm',
             capacity: 'Unlimited'
 		},
+        {
+			title:'Mass Migration 2k16',
+			tags: ['Migration', 'Geese', 'Too cold in loo'],
+            details: 'The annual mass migration event led by Mr. Goose.',
+            location: 'Anywhere but here',
+            time: 'October-April',
+            capacity: '>=0'
+		}
 	];
 	
 	// Show main view in the first column as soon as controller loads
