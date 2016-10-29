@@ -10,12 +10,12 @@
 
 <!-- Front page -->
 <script type="text/ng-template" id="eventlobbyMain.html">
-    <widget-search label="What event are you looking for?" 
-                   placeholder="Enter an event name or location to find events there"
-                   search-results-title="Here you go"
+    <widget-search label = "Event Search"
+                   placeholder="Enter an event name, location, or tags to search for"
+                   search-results-title="Here you go:"
                    data="items"
-                   min-char="2"
-                   fields="['title','tags']">
+                   min-char="0"
+                   fields="['title','tags','location']">
 
         <widget-searching>
             <widget-list list="item in searchResults track by item.title">
@@ -63,7 +63,6 @@
                 Submit Event
             </button>
         </widget-row>
-</script>
      <widget-row>
         <button class="btn btn-default" ng-click="showDetails(items[0])">
             I'm Bored
