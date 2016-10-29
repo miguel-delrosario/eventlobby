@@ -1,5 +1,15 @@
-<!-- Primary template that will get shown when widget loads -->
-<script type="text/ng-template" id="eventlobbyMain.html"> 
+<script type="text/ng-template" id="loading.html">
+    <widget-row>
+        <widget-cell>
+            <div class="pDetails">
+                Loading..
+            </div>
+        </widget-cell>
+    </widget-row>
+</script>
+
+<!-- Front page -->
+<script type="text/ng-template" id="eventlobbyMain.html">
 	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
 		<widget-cell fill>
 			<span class="itemName">{{item.title}}</span>
@@ -20,6 +30,40 @@
     </widget-row>
 </script>
 
+<!-- Menu template -->
+<script type="text/ng-template" id="widgetMenu.html">
+    <li>
+        <a ng-click="menuButtonClick()">
+            Logout
+        </a>
+    </li>
+</script>
+
+<!-- Submit Event View -->
+<script type="text/ng-template" id="sampleWorkingWithViewsSecond.html">
+    <widget-row>
+        <widget-cell>
+            <h2>Second page</h2>
+            <div class="pDetails well well-lg">The second page has been loaded into view #1. Click the "Right Column" buttons below to load content into the right view.</div>
+            <div class="btn-group-vertical" role="group">
+                <button class="btn btn-default" ng-click="showInColumnOne('sampleWorkingWithViewsMain.html')">
+                    Back to Main View
+                </button>
+                <button class="btn btn-default" 
+                        ng-click="showInColumnTwo('sampleWorkingWithViewsCol2page1.html')">
+                    Load Right Column #1 View
+                </button>
+                <button class="btn btn-default" 
+                        ng-click="showInColumnTwo('sampleWorkingWithViewsCol2page2.html')">
+                    Load Right Column #2 View
+                </button>
+            </div>
+        </widget-cell>
+    </widget-row>
+</script>
+<!-- Primary template that will get shown when widget loads -->
+
+
 <!-- This template gets shown when user clicks one of the items in the list -->
 <script type="text/ng-template" id="eventlobbyDetails.html"> 
 	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
@@ -28,9 +72,9 @@
 	</wr>
 	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
 	<wr><div class="pDetails">{{detailsItem.details}}</div></wr>
-    <wr><div class="pDetails">{{detailsItem.location}}</div></wr>
-    <wr><div class="pDetails">{{detailsItem.time}}</div></wr>
-    <wr><div class="pDetails">{{detailsItem.capacity}}</div></wr>
+    <wr><div class="pDetails">Location: {{detailsItem.location}}</div></wr>
+    <wr><div class="pDetails">Time: {{detailsItem.time}}</div></wr>
+    <wr><div class="pDetails">Capacity: {{detailsItem.capacity}}</div></wr>
 </script>
 
 <!-- Submission view -->

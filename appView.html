@@ -16,10 +16,11 @@
 		{{detailsItem.title}}
 	<span ng-repeat= "tag in detailsItem.tags" class="badge badge-balanced">{{tag}}</span>
     </div>
-	<div class="item item-text-wrap">
-        <p>{{detailsItem.details}}</p>
-        <p>{{detailsItem.location}}</p>
-        <p>{{detailsItem.time}}</p>
-        <p>{{detailsItem.capacity}}</p>
+	<div class="item item-text-wrap"><br>
+    <!-- <p>{{detailsItem.details}}</p> -->
+	<wr><div class="pDetails">{{detailsItem.details}}</div></wr><br>
+    <wr><div class="pDetails">{{detailsItem.location}}</div></wr><br>
+    <wr><div class="pDetails">{{detailsItem.time}}</div></wr><br>
+    <wr><div class="pDetails">{{detailsItem.capacity}}</div></wr><br>
     </div>
 </script>
