@@ -12,7 +12,8 @@
 <script type="text/ng-template" id="eventlobbyMain.html">
 	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
 		<widget-cell fill>
-			<span class="itemName">{{item.title}}</span>
+			<span class="itemName">{{item.title}}
+            </span>
             <widget-row>
                 <span ng-repeat= "tag in item.tags" class="label label-success">
                     {{tag}}
@@ -46,44 +47,29 @@
 <!-- Submission view -->
 <script type="text/ng-template" id="submissionView.html">
     <widget-row>
-        <widget-cell>
-            <h2>Event Title</h2>
-            <wr><input type="text" class="form-control" ng-model="insertValue.title" placeholder="Enter some text and submit" />
+            <h2>Event Submission</h2>
+                    <div class="pDetails">Enter the title for the event:</div>
+            <wr><input type="text" class="form-control" ng-model="insertValue.title" placeholder="Title" />
                             <span class="input-group-btn" style="overflow:hidden;">
-                                <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span></wr>
-            <div class="pDetails">Enter the title for the event.</div>
-        </widget-cell>
     </widget-row>
     <widget-row>
-        <widget-cell>
-            <h2>Location</h2>
-            <wr><input type="text" class="form-control" ng-model="insertValue.location" placeholder="Enter some text and submit" />
+        <div class="pDetails">Enter the location of the event:</div>
+            <wr><input type="text" class="form-control" ng-model="insertValue.location" placeholder="Loaction" />
                             <span class="input-group-btn" style="overflow:hidden;">
-                                <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span></wr>
-            <div class="pDetails">Enter the location for the event.</div>
-        </widget-cell>
     </widget-row>
     <widget-row>
-        <widget-cell>
-            <h2>Time</h2>
-            <wr><input type="text" class="form-control" ng-model="insertValue.time" placeholder="Enter some text and submit" />
+        <div class="pDetails">Enter the start and end time for the event:</div>
+            <wr><input type="text" class="form-control" ng-model="insertValue.time" placeholder="Time" />
                             <span class="input-group-btn" style="overflow:hidden;">
-                                <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span></wr>
-            <div class="pDetails">Enter start and end time for the event.</div>
-        </widget-cell>
     </widget-row>
     <widget-row>
-        <widget-cell>
-            <h2>Capacity</h2>
-            <wr><input type="text" class="form-control" ng-model="insertValue.capacity" placeholder="Enter some text and submit" />
+        <div class="pDetails">Enter the maximum capacity for the event, leave blank if no maximum capacity:</div>
+            <wr><input type="text" class="form-control" ng-model="insertValue.capacity" placeholder="Capacity" />
                             <span class="input-group-btn" style="overflow:hidden;">
-                                <button class="btn btn-primary glyphicon glyphicon glyphicon-ok btn" type="submit" style="margin-top: -1px;"></button>
                             </span></wr>
-            <div class="pDetails">Enter the maximum capacity for the event, leave blank if no maximum capacity.</div>
-        </widget-cell>
     </widget-row>
     <widget-row>
     	<button class="btn btn-default" ng-click="showInColumnOne('eventlobbyMain.html')">

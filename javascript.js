@@ -17,7 +17,7 @@ angular.module('portalApp')
             details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
             location: 'Campus-Wide',
             time: '11am - 7pm',
-            capacity: null
+            capacity: 'Unlimited'
 		}
 	];
 	
