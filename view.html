@@ -10,28 +10,59 @@
 
 <!-- Front page -->
 <script type="text/ng-template" id="eventlobbyMain.html">
-    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
-        <widget-cell fill>
-            <span class="itemName">{{item.title}}
+    <widget-search label = "Event Search"
+                   placeholder="Enter an event name, location, or tags to search for"
+                   search-results-title="Here you go:"
+                   data="items"
+                   min-char="0"
+                   fields="['title','tags','location']">
+
+        <widget-searching>
+            <widget-list list="item in searchResults track by item.title">
+                <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+            <widget-cell fill>
+                <span class="itemName">{{item.title}}
             </span>
-            <widget-row>
-                <div class="pDetails">{{item.time}}</div>
-            </widget-row>
-            <widget-row>
-                <span ng-repeat="tag in item.tags" class="label label-success">
+                <widget-row>
+                    <div class="pDetails">{{item.time}}</div>
+                </widget-row>
+                <widget-row>
+                    <span ng-repeat="tag in item.tags" class="label label-success">
                     {{tag}}
                 </span>
-            </widget-row>
-        </widget-cell>
-        <widget-cell>
-            <widget-icon name="angle-right"></widget-icon>
-        </widget-cell>
-    </widget-row>
-    <widget-row>
-        <button class="btn btn-default" ng-click="showInColumnOne('submissionView.html')">
-            Submit Event
-        </button>
-    </widget-row>
+                </widget-row>
+            </widget-cell>
+            <widget-cell>
+                <widget-icon name="angle-right"></widget-icon>
+            </widget-cell>
+        </widget-row>
+            </widget-list>
+        </widget-searching>
+
+        <widget-not-searching>
+        <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+            <widget-cell fill>
+                <span class="itemName">{{item.title}}
+            </span>
+                <widget-row>
+                    <div class="pDetails">{{item.time}}</div>
+                </widget-row>
+                <widget-row>
+                    <span ng-repeat="tag in item.tags" class="label label-success">
+                    {{tag}}
+                </span>
+                </widget-row>
+            </widget-cell>
+            <widget-cell>
+                <widget-icon name="angle-right"></widget-icon>
+            </widget-cell>
+        </widget-row>
+            </widget-not-searching>
+        <widget-row>
+            <button class="btn btn-default" ng-click="showInColumnOne('submissionView.html')">
+                Submit Event
+            </button>
+        </widget-row>
      <widget-row>
         <button class="btn btn-default" ng-click="showDetails(items[0])">
             I'm Bored
