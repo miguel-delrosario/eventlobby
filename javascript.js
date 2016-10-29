@@ -9,33 +9,15 @@ angular.module('portalApp')
             details: 'A study group for the Math 135 A06',
             location: 'QNC XXXX',
             time: '5pm - 7pm',
+            capacity: '2/4'
 		},
 		{
-			title:'Math 135 Study Group',
-			tags: ['Study Group', 'Math 135', 'QNC'],
-            details: 'A study group for the Math 135 A06',
-            location: 'QNC XXXX',
-            time: '5pm - 7pm',
-		},
-		{
-			title:'Item 3',
-			tags: ['tag A', 'tag H'],
-			details: 'Donec id quam eu odio feugiat sagittis. Duis a tempus neque. Praesent elementum quis ante quis commodo. Sed tincidunt aliquet dolor sit amet laoreet. '
-		},
-		{
-			title:'Item 4',
-			tags: ['tag I'],
-			details: 'Proin sem quam, rutrum id ante id, scelerisque tempor quam. Curabitur pharetra turpis at sem placerat, non vehicula ligula tincidunt.'
-		},
-		{
-			title:'Item 5',
-			tags: ['tag C', 'tag K', 'tag B'],
-			details: 'Mauris nec ultricies metus. Cras et dictum justo. Nam a ullamcorper dolor. Cras fringilla metus vel facilisis vehicula.'
-		},
-		{
-			title:'Item 6',
-			tags: ['tag A', 'tag B', 'tag C'],
-			details: 'Curabitur scelerisque lorem risus, in luctus orci hendrerit non. Praesent quis tellus dapibus dolor consectetur volutpat.'
+			title:'Hug a Goose, Break a Record',
+			tags: ['Miscellaneous', 'Campus-Wide'],
+            details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
+            location: 'Campus-Wide',
+            time: '11am - 7pm',
+            capacity: null
 		}
 	];
 	
