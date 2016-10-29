@@ -25,7 +25,7 @@ angular.module('portalApp')
             details: 'The annual mass migration event led by Mr. Goose.',
             location: 'Anywhere but here',
             time: 'October-April',
-            capacity: '>=0'
+            capacity: '>=0 geese'
 		}
 	];
 	
