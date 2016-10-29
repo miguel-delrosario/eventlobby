@@ -19,6 +19,22 @@ angular.module('portalApp')
             time: 'November 4, 11am - 7pm',
             capacity: 'Unlimited'
 		}
+        {
+			title:'EngHacks',
+			tags: ['Miscellaneous', 'Campus-Wide'],
+            details: 'Hacking with Engineers',
+            location: 'UW',
+            time: 'October 28-29',
+            capacity: 'Unlimited'
+		}
+        {
+			title:'Mass Migration 2k16',
+			tags: ['Geese', 'Migration', 'It is way too cold'],
+            details: 'The annual mass migration to warmer climates led by Mr. Goose.',
+            location: 'Anywhere but here',
+            time: 'October-April',
+            capacity: '>=0'
+		}
 	];
 	
 	// Show main view in the first column as soon as controller loads
