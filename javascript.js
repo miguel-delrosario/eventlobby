@@ -8,7 +8,7 @@ angular.module('portalApp')
 			tags: ['Study Group', 'Math 135', 'QNC'],
             details: 'A study group for Math 135 A06',
             location: 'QNC XXXX',
-            time: '5pm - 7pm',
+            time: 'October 30, 5pm - 7pm',
             capacity: '2/4'
 		},
 		{
@@ -16,7 +16,7 @@ angular.module('portalApp')
 			tags: ['Miscellaneous', 'Campus-Wide'],
             details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
             location: 'Campus-Wide',
-            time: '11am - 7pm',
+            time: 'November 4, 11am - 7pm',
             capacity: 'Unlimited'
 		}
 	];
