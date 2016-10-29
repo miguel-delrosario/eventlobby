@@ -71,6 +71,7 @@ angular.module('portalApp')
             capacity: 'Unlimited',
             addedby: 'Sci-Fi Club'
 		},
+        
         {
 			title:'Hug a Goose, Break a Record',
 			tags: ['Miscellaneous', 'Campus-Wide', 'Mr.Goose'],
@@ -79,6 +80,15 @@ angular.module('portalApp')
             time: 'November 4, 11am - 7pm',
             capacity: 'Unlimited',
             addedby: 'mgoose'
+		},
+        {
+			title:'Math 137 Study Group',
+			tags: ['Study Group', 'Math 137', 'QNC'],
+            details: 'A study group for Math 138',
+            location: 'QNC 1234',
+            time: 'November 5, 6pm - 9pm',
+            capacity: '2/4',
+            addedby: 'anica'
 		}
 	]};
         
