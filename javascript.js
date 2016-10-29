@@ -20,10 +20,10 @@ angular.module('portalApp')
             capacity: 'Unlimited'
 		},
         {
-			title:'EngHacks',
-			tags: ['Miscellaneous', 'Campus-Wide'],
+			title:'EngHack',
+			tags: ['Hackathon', 'RCH'],
             details: 'Hacking with Engineers',
-            location: 'UW',
+            location: 'RCH 302',
             time: 'October 28-29',
             capacity: 'Unlimited'
 		},
