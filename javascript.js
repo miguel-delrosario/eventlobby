@@ -20,16 +20,16 @@ angular.module('portalApp')
             capacity: 'Unlimited'
 		},
         {
-			title:'EngHacks',
-			tags: ['Miscellaneous', 'Campus-Wide'],
+			title:'EngHack',
+			tags: ['Hackathon', 'RCH'],
             details: 'Hacking with Engineers',
-            location: 'UW',
+            location: 'RCH 302',
             time: 'October 28-29',
             capacity: 'Unlimited'
 		},
         {
 			title:'Mass Migration 2k16',
-			tags: ['Geese', 'Migration', 'It is way too cold'],
+			tags: ['Geese', 'Migration', 'Too cold in loo'],
             details: 'The annual mass migration to warmer climates led by Mr. Goose.',
             location: 'Anywhere but here',
             time: 'October-April',
