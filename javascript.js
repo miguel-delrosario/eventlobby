@@ -7,7 +7,7 @@ angular.module('portalApp')
 			title:'Math 135 Study Group',
 			tags: ['Study Group', 'Math 135', 'QNC'],
             details: 'A study group for Math 135 A06',
-            location: 'QNC XXXX',
+            location: 'M3 1234',
             time: 'October 30, 5pm - 7pm',
             capacity: '2/4'
 		},
