@@ -10,21 +10,24 @@
 
 <!-- Front page -->
 <script type="text/ng-template" id="eventlobbyMain.html">
-	<widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
-		<widget-cell fill>
-			<span class="itemName">{{item.title}}
+    <widget-row ng-repeat="item in items" clickable ng-click="showDetails(item)">
+        <widget-cell fill>
+            <span class="itemName">{{item.title}}
             </span>
             <widget-row>
-                <span ng-repeat= "tag in item.tags" class="label label-success">
+                <div class="pDetails">{{item.time}}</div>
+            </widget-row>
+            <widget-row>
+                <span ng-repeat="tag in item.tags" class="label label-success">
                     {{tag}}
                 </span>
             </widget-row>
-		</widget-cell>
-		<widget-cell>
-			<widget-icon name="angle-right"></widget-icon>
-		</widget-cell>
-	</widget-row>
-  	<widget-row>
+        </widget-cell>
+        <widget-cell>
+            <widget-icon name="angle-right"></widget-icon>
+        </widget-cell>
+    </widget-row>
+    <widget-row>
         <button class="btn btn-default" ng-click="showInColumnOne('submissionView.html')">
             Submit Event
         </button>
@@ -32,52 +35,83 @@
 </script>
 
 <!-- This template gets shown when user clicks one of the items in the list -->
-<script type="text/ng-template" id="eventlobbyDetails.html"> 
-	<!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
-	<wr>
-		<wc><h2>{{detailsItem.title}}</h2></wc>
-	</wr>
-	<wr><wc><span ng-repeat= "tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc></wr>
-	<wr><div class="pDetails">{{detailsItem.details}}</div></wr>
-    <wr><div class="pDetails">Location: {{detailsItem.location}}</div></wr>
-    <wr><div class="pDetails">Time: {{detailsItem.time}}</div></wr>
-    <wr><div class="pDetails">Capacity: {{detailsItem.capacity}}</div></wr>
+<script type="text/ng-template" id="eventlobbyDetails.html">
+    <!-- 'wr' and 'wc' are short for 'widget-row' and 'widget-cell' -->
+    <wr>
+        <wc>
+            <h2>{{detailsItem.title}}</h2></wc>
+    </wr>
+    <wr>
+        <wc><span ng-repeat="tag in detailsItem.tags" class="label label-success">{{tag}}</span></wc>
+    </wr>
+    <wr>
+        <div class="pDetails">{{detailsItem.details}}</div>
+    </wr>
+    <wr>
+        <div class="pDetails">Location: {{detailsItem.location}}</div>
+    </wr>
+    <wr>
+        <div class="pDetails">Time: {{detailsItem.time}}</div>
+    </wr>
+    <wr>
+        <div class="pDetails">Capacity: {{detailsItem.capacity}}</div>
+    </wr>
 </script>
 
 <!-- Submission view -->
 <script type="text/ng-template" id="submissionView.html">
-        <wr><wc>
-            <h2>Event Submission</h2> </wc></wr>
-        <widget-row>
-                    <div class="pDetails">Enter the title for the event:</div>
-            <wr><input type="text" class="form-control" ng-model="insertValue.title" placeholder="Title e.g. Math 135 Study Group" />
-                            <span class="input-group-btn" style="overflow:hidden;">
+    <wr>
+        <wc>
+            <h2>Event Submission</h2> </wc>
+    </wr>
+    <widget-row>
+        <div class="pDetails">Enter the title for the event:</div>
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.title" placeholder="Title" />
+            <span class="input-group-btn" style="overflow:hidden;">
+                            </span></wr>
+    </widget-row>
+    <widget-row>
+        <div class="pDetails">Enter a description for the event:</div>
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.description" placeholder=" ̶ ̷D̷i̷s̷r̷u̷p̷t̷i̷o̷n̷ Description" />
+            <span class="input-group-btn" style="overflow:hidden;">
                             </span></wr>
     </widget-row>
     <widget-row>
         <div class="pDetails">Enter the location of the event:</div>
-            <wr><input type="text" class="form-control" ng-model="insertValue.location" placeholder="Location e.g. QNC 1337" />
-                            <span class="input-group-btn" style="overflow:hidden;">
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.location" placeholder="Location" />
+            <span class="input-group-btn" style="overflow:hidden;">
                             </span></wr>
     </widget-row>
     <widget-row>
-        <div class="pDetails">Enter the start and end time for the event:</div>
-            <wr><input type="text" class="form-control" ng-model="insertValue.time" placeholder="Time e.g. 5pm-7pm" />
-                            <span class="input-group-btn" style="overflow:hidden;">
+        <div class="pDetails">Enter the date, start time, and end time for the event (e.g. January 1, 12pm-7pm):</div>
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.time" placeholder="Time" />
+            <span class="input-group-btn" style="overflow:hidden;">
                             </span></wr>
     </widget-row>
     <widget-row>
         <div class="pDetails">Enter the maximum capacity for the event, leave blank if no maximum capacity:</div>
-            <wr><input type="text" class="form-control" ng-model="insertValue.capacity" placeholder="Capacity e.g. 5/7" />
-                            <span class="input-group-btn" style="overflow:hidden;">
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.capacity" placeholder="Capacity" />
+            <span class="input-group-btn" style="overflow:hidden;">
                             </span></wr>
     </widget-row>
     <widget-row>
-    	<button class="btn btn-default" ng-click="showInColumnOne('eventlobbyMain.html')">
+        <div class="pDetails">Enter any tags you wish to associate with the event, seperated by commas (e.g. Study Group, MATH135, QNC):</div>
+        <wr>
+            <input type="text" class="form-control" ng-model="insertValue.tags" placeholder="Tags" />
+            <span class="input-group-btn" style="overflow:hidden;">
+                            </span></wr>
+    </widget-row>
+    <widget-row>
+        <button class="btn btn-default" ng-click="showInColumnOne('eventlobbyMain.html')">
             Submit
         </button>
         <button class="btn btn-default" ng-click="showInColumnOne('eventlobbyMain.html')">
             Cancel
         </button>
-	</widget-row>
+    </widget-row>
 </script>
