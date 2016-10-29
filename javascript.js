@@ -8,18 +8,9 @@ angular.module('portalApp')
 			tags: ['Study Group', 'Math 135', 'M3'],
             details: 'A study group for Math 135 A06',
             location: 'M3 1234',
-            time: 'October 30, 5pm - 7pm',
+            time: 'October 29, 6pm - 9pm',
             capacity: '2/4',
             addedby: 'fhamdullahpur'
-		},
-		{
-			title:'Hug a Goose, Break a Record',
-			tags: ['Miscellaneous', 'Campus-Wide', 'Mr.Goose'],
-            details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
-            location: 'Campus-Wide',
-            time: 'November 4, 11am - 7pm',
-            capacity: 'Unlimited',
-            addedby: 'mgoose'
 		},
         {
 			title:'Haunted Hallways',
@@ -28,7 +19,7 @@ angular.module('portalApp')
             location: 'V1 E1 Quad',
             time: 'October 27, 8pm - 11pm',
             capacity: '3/6',
-            addedby: 'mpanino'
+            addedby: 'almao'
 		},
         {
 			title:'CS 135 Study Group',
@@ -47,6 +38,15 @@ angular.module('portalApp')
             time: 'October 31 - November 4',
             capacity: 'Unlimited',
             addedby: 'Sci-Fi Club'
+		},
+        {
+			title:'Hug a Goose, Break a Record',
+			tags: ['Miscellaneous', 'Campus-Wide', 'Mr.Goose'],
+            details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
+            location: 'Campus-Wide',
+            time: 'November 4, 11am - 7pm',
+            capacity: 'Unlimited',
+            addedby: 'mgoose'
 		}
 	];
 	
