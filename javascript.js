@@ -24,6 +24,11 @@ angular.module('portalApp')
 	// Show main view in the first column as soon as controller loads
 	$scope.portalHelpers.showView('eventlobbyMain.html', 1);
 	
+    $scope.showInColumnOne = function (viewname) {
+        // Show view in column one1
+        $scope.portalHelpers.showView(viewname, 1)
+    };
+    
 	// This function gets called when user clicks an item in the list
 	$scope.showDetails = function(item){
 		// Make the item that user clicked available to the template
