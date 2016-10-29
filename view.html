@@ -61,7 +61,7 @@
             </button>
         </widget-row>
         <widget-row>
-            <button class="btn btn-default" ng-click="showDetails(items[0])">
+            <button class="btn btn-default" ng-click="showDetails(items.value[0])">
                 I'm Bored
             </button>
         </widget-row>
@@ -88,6 +88,9 @@
     </wr>
     <wr>
         <div class="pDetails">Capacity: {{detailsItem.capacity}}</div>
+    </wr>
+    <wr>
+        <div class="pDetails">Added by: {{detailsItem.addedby}}</div>
     </wr>
 </script>
 
