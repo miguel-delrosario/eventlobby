@@ -13,7 +13,7 @@ angular.module('portalApp')
 		},
 		{
 			title:'Hug a Goose, Break a Record',
-			tags: ['Miscellaneous', 'Campus-Wide'],
+			tags: ['Miscellaneous', 'Campus-Wide', 'Mr.Goose'],
             details: 'Waterloo is attempting the world record for the most hugs given to a large stuffed toy in an 8 HOUR ACTION PACKED GOOSE HUGGING MARATHON!!!',
             location: 'Campus-Wide',
             time: 'November 4, 11am - 7pm',
