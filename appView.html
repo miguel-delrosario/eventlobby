@@ -1,26 +1,25 @@
 <!-- Primary template that will get shown when widget loads -->
 <script type="text/ng-template" id="eventlobbyMain.html"> 
-	<div class="item item-text-wrap" ng-repeat="item in items" ng-click="showDetails(item)">
-		<span class="itemName">{{item.title}}</span>
-		<span ng-repeat= "tag in item.tags" class="badge badge-balanced">
-			{{tag}}
+    <div class="item item-text-wrap" ng-repeat="item in items" ng-click="showDetails(item)">
+        <span class="itemName">{{item.title}}</span>
+        <span ng-repeat= "tag in item.tags" class="badge badge-balanced">
+            {{tag}}
         </span>
-	
-		<i class="ion-chevron-right icon"></i>
-	</div>
+        <i class="ion-chevron-right icon"></i>
+    </div>
 </script>
 
 <!-- This template gets shown when user clicks one of the items in the list -->
 <script type="text/ng-template" id="eventlobbyDetails.html"> 
-	<div class="item">
-		{{detailsItem.title}}
-	<span ng-repeat= "tag in detailsItem.tags" class="badge badge-balanced">{{tag}}</span>
+    <div class="item">
+        {{detailsItem.title}}
+        <span ng-repeat= "tag in detailsItem.tags" class="badge badge-balanced">{{tag}}</span>
     </div>
-	<div class="item item-text-wrap"><br>
-    <!-- <p>{{detailsItem.details}}</p> -->
-	<wr><div class="pDetails">{{detailsItem.details}}</div></wr><br>
-    <wr><div class="pDetails">{{detailsItem.location}}</div></wr><br>
-    <wr><div class="pDetails">{{detailsItem.time}}</div></wr><br>
-    <wr><div class="pDetails">{{detailsItem.capacity}}</div></wr><br>
+    <div class="item item-text-wrap"><br>
+        <!-- <p>{{detailsItem.details}}</p> -->
+        <wr><div class="pDetails">{{detailsItem.details}}</div></wr><br>
+        <wr><div class="pDetails">{{detailsItem.location}}</div></wr><br>
+        <wr><div class="pDetails">{{detailsItem.time}}</div></wr><br>
+        <wr><div class="pDetails">{{detailsItem.capacity}}</div></wr><br>
     </div>
 </script>
